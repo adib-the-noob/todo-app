@@ -7,6 +7,7 @@ from .base_models import BaseModel
 class Todo(BaseModel):
     __tablename__ = "todos"
     
+    id = Column(Integer, primary_key=True, index=True)
     title = Column(String)
     description = Column(String)
     owner_id = Column(Integer, ForeignKey("users.id"))

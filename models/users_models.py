@@ -12,5 +12,5 @@ class User(BaseModel):
     email = Column(String, unique=True)
     password = Column(String)
     
-    todo = relationship("Todo", back_populates="owner")
+    todos = relationship("Todo", back_populates="owner")
 
